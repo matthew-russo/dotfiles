@@ -1,0 +1,37 @@
+brew update
+
+brew upgrade
+
+BREW_PREFIX=$(brew --prefix)
+
+brew install coreutils
+ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
+
+brew install moreutils
+brew install findutils
+brew install gnu-sed --with-default-names
+brew install gnupg
+
+brew cask install iterm2
+
+brew install zsh
+
+brew install wget --with-iri
+
+brew install tmux
+
+brew install weechat
+
+brew install ack
+brew install git
+brew install git-lfs
+brew install tree
+brew install cmake
+
+# Searching
+brew install fzf
+brew install the_silver_searcher
+
+brew cask install google-chrome
+
+brew cleanup
