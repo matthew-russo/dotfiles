@@ -28,6 +28,9 @@ brew install git-lfs
 brew install tree
 brew install cmake
 
+brew install kubernetes-cli
+brew install awscli
+
 # Searching
 brew install fzf
 brew install the_silver_searcher

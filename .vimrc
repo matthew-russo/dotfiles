@@ -54,6 +54,8 @@ nnoremap <c-u> viwU
 
 " replaces the current word with whatever is in currently yanked, and re-yanks
 " that word if you want to change multiple instances of the same thing 
+" its a little janky and needs to be fixed cause if you do it on the first
+" character of a word, it doesn't work
 nnoremap `` bvepvby
 
 " Move visual block
