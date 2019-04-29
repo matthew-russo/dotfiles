@@ -3,6 +3,21 @@ call plug#begin('~/.vim/plugged')
 " Theme
 Plug 'morhetz/gruvbox'
 
+" Linting
+Plug 'w0rp/ale'
+
+" Tag management
+Plug 'vim-scripts/taglist.vim'
+
+" YouCompleteMe <3
+Plug 'Valloric/YouCompleteMe'
+
+" Git integration 
+Plug 'tpope/vim-fugitive'
+
+" Pretty status bar
+Plug 'vim-airline/vim-airline'
+
 " Search / Navigation utils
 Plug 'scrooloose/nerdtree'
 Plug 'wincent/Command-T'
