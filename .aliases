@@ -132,3 +132,8 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# always use nvim with NERDTree
+alias vi='nvim -c NERDTree'
+alias vim='nvim -c NERDTree'
+alias nvim='nvim -c NERDTree'

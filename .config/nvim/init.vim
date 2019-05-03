@@ -6,11 +6,27 @@ Plug 'morhetz/gruvbox'
 " Linting
 Plug 'w0rp/ale'
 
+" Completion
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
+" Completion Language Extensions
+Plug 'sebastianmarkow/deoplete-rust'
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'deoplete-plugins/deoplete-go'
+Plug 'eagletmt/neco-ghc'
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
 " Tag management
 Plug 'vim-scripts/taglist.vim'
-
-" YouCompleteMe <3
-Plug 'Valloric/YouCompleteMe'
 
 " Git integration 
 Plug 'tpope/vim-fugitive'

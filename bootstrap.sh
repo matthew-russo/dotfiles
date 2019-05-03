@@ -20,6 +20,11 @@ function doIt() {
 
         source ~/.zshrc;
 
+        # language packages
+        sh .language-packages/pip
+        sh .language-packages/go
+        sh .language-packages/cargo
+
         sudo dscl . -create /Users/$USER UserShell $(which zsh)
 }
 
