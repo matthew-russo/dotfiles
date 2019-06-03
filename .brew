@@ -27,6 +27,7 @@ brew install git
 brew install git-lfs
 brew install tree
 brew install cmake
+brew install jq
 
 brew install kubernetes-cli
 brew install awscli
@@ -42,5 +43,6 @@ brew install python3
 brew install racket
 brew install go
 brew install haskell-stack
+brew install shellcheck
 
 brew cleanup -s

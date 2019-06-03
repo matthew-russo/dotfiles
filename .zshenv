@@ -5,7 +5,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # go
-export GOPATH="${HOME}/.go"
+export GOPATH="${HOME}/projects/go"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 test -d "${GOPATH}" || mkdir "${GOPATH}"
