@@ -102,6 +102,7 @@ vnoremap > >gv
 " Next and previous ALE errors/warnings
 nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr> 
+nmap <silent> <leader>b :ALEGoToDefinitionInVSplit<cr> 
 
 au BufRead,BufNewFile *.es6 set filetype=javascript
 
