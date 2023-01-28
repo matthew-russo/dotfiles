@@ -1,2 +1,0 @@
-pip3 install --user --upgrade jedi
-pip3 install --user --upgrade pyvim 

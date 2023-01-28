@@ -4,7 +4,10 @@
 
 [credential]
 
-        helper = osxkeychain
+  helper = osxkeychain
+
+[core]
+        editor = /usr/local/bin/nvim
 
 [alias]
 
@@ -190,3 +193,5 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[init]
+	defaultBranch = main

@@ -1,8 +1,13 @@
-ZSH_THEME="agnoster"
+skip_global_compinit=1
 
-plugins=(aws brew gitfast jsontools kubectl tmux web-search z)
+export ZSH=$HOME/.oh-my-zsh
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
-source $ZSH/oh-my-zsh.sh
-source $HOME/.zshenv
-source $HOME/.functions
-source $HOME/.aliases
+# go
+export GOPATH="${HOME}/projects/go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+

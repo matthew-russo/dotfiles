@@ -10,16 +10,19 @@ Plug 'tpope/vim-fugitive' " Git integration
 Plug 'vim-airline/vim-airline' " Pretty status bar
 
 " Search / Navigation utils
-Plug 'scrooloose/nerdtree'
+Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'wincent/Command-T'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'nelstrom/vim-visual-star-search' " allows using '*' to search for currently selected text
 set rtp+=~/.fzf
 
-Plug 'nelstrom/vim-visual-star-search'
-Plug 'neovimhaskell/haskell-vim' " Language extensions
-Plug 'leafgarland/typescript-vim'
+" Language extensions and source formatting
 Plug 'Yggdroot/indentLine' " Clear indentations
+Plug 'neovimhaskell/haskell-vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'ziglang/zig.vim'
 
 call plug#end()
 
@@ -27,6 +30,8 @@ colorscheme gruvbox
 " colorscheme happy_hacking
 
 filetype plugin indent on
+
+set shell=/bin/bash
 
 " Don't overwrite value set by autocommand
 if expand('%:t') == 'makefile'
