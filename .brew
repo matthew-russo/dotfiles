@@ -31,7 +31,7 @@ brew install awscli
 brew install fzf
 brew install the_silver_searcher
 
-brew cask install dash
+brew install homebrew/cask/dash
 
 # Languages
 brew install python3
