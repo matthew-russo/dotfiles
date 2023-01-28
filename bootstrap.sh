@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${BASH_SOURCE}")" || exit 1;
 
 git pull origin master;
 
@@ -20,15 +20,10 @@ function doIt() {
 
         source ~/.zshrc;
 
-        # language packages
-        sh .language-packages/pip
-        sh .language-packages/go
-        sh .language-packages/cargo
-
-        sudo dscl . -create /Users/$USER UserShell $(which zsh)
+        sudo dscl . -create /"Users/$USER" UserShell $(which zsh)
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
 	doIt;
 else
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
